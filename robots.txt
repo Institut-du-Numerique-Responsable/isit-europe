@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://isit-europe.org/sitemap.xml
