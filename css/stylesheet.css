@@ -38,8 +38,12 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	text-align:center;
 	background:#f7f7f7;
-	font-size:12px;
+	font-size:16px;
+	-webkit-text-size-adjust:100%;
 }
+
+img {max-width:100%;height:auto;}
+a {touch-action:manipulation;}
 
 div#conteneur {
 	width:80%;
@@ -106,9 +110,30 @@ div.square-content h2, div.square-content p {color:#fff;}
 
 h1 {padding:0px 0;width:50%;color:#357692;font-weight:900;font-size:3rem;text-transform: uppercase;letter-spacing:-2px;}
 
+.logos {
+	display:flex;
+	gap:16px;
+	flex-wrap:wrap;
+	align-items:center;
+	justify-content:space-around;
+	margin:10px 0 20px;
+}
+.logo-link {
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+	padding:8px;
+	min-height:44px;
+	line-height:0;
+}
 img.isit-logo {
-	width:30%;
-	margin:0 1%;
+	height:70px;
+	width:auto;
+	max-width:100%;
+	object-fit:contain;
+}
+@media only screen and (max-width: 782px) {
+	img.isit-logo {height:56px;}
 }
 p {
 	font-size:0.9rem;
@@ -147,7 +172,6 @@ ul li {
 	div#main-content {width:95%;padding:10px;}
 	div#side-content {width:95%;padding:10px;}
 	p {font-size:1.1rem;}
-	img.isit-logo {width:32%;margin:0;}
 
 	h1 {font-size:2.4rem;line-height:2.6rem;}
 
@@ -222,6 +246,45 @@ section h2 {
     padding-top: 30px;
     font-size: 0.8rem;
     color: #888;
+}
+
+/* LANGUAGE SWITCHER */
+
+.lang-switcher {
+    text-align: right;
+    padding: 12px 30px 0 30px;
+    max-width: 1260px;
+    margin: 0 auto;
+    font-size: 0.85rem;
+}
+
+.lang-switcher a {
+    display: inline-block;
+    padding: 8px 10px;
+    margin-left: 4px;
+    color: #357692;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    min-width: 32px;
+    min-height: 32px;
+    text-align: center;
+}
+
+.lang-switcher a:hover {
+    background: #357692;
+    color: #fff;
+}
+
+.lang-switcher a[aria-current="true"] {
+    background: #357692;
+    color: #fff;
+    border-color: #357692;
+}
+
+@media only screen and (max-width: 782px) {
+    .lang-switcher { text-align: center; padding: 10px; }
 }
 
 /* ACCESSIBILITE */

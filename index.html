@@ -2,19 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>ISIT Europe | The european network of Institutes for Sustainable IT</title>
-    <meta name="description" content="The aim of ISIT Europe is to bring together companies, organizations and individuals, and help them succeed their digital transition while reducing the environmental and social footprint of their IT services and usages." />
+    <title>ISIT Europe | The European network of Institutes for Sustainable IT</title>
+    <meta name="description" content="ISIT Europe brings together Belgian, French and Swiss Institutes for Sustainable IT to reduce the environmental and social footprint of digital services." />
     <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#357692">
     <link rel="canonical" href="https://isit-europe.org/" />
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="alternate" hreflang="en" href="https://isit-europe.org/" />
+    <link rel="alternate" hreflang="fr" href="https://isit-europe.org/fr/" />
+    <link rel="alternate" hreflang="de" href="https://isit-europe.org/de/" />
+    <link rel="alternate" hreflang="it" href="https://isit-europe.org/it/" />
+    <link rel="alternate" hreflang="x-default" href="https://isit-europe.org/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="medias/favicon.png">
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="fonts/open-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/open-sans-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/stylesheet.css">
 
     <!-- Open Graph -->
     <meta property="og:title" content="ISIT Europe | The European network of Institutes for Sustainable IT" />
     <meta property="og:description" content="ISIT Europe brings together organisations to reduce the environmental and social footprint of IT services across Belgium, France and Switzerland." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://isit-europe.org/" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:site_name" content="ISIT Europe" />
     <meta property="og:image" content="https://isit-europe.org/medias/isit-be.png" />
+    <meta property="og:image:width" content="709" />
+    <meta property="og:image:height" content="200" />
+    <meta property="og:image:alt" content="ISIT Belgium logo" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="ISIT Europe | The European network of Institutes for Sustainable IT" />
+    <meta name="twitter:description" content="ISIT Europe brings together Belgian, French and Swiss Institutes for Sustainable IT." />
+    <meta name="twitter:image" content="https://isit-europe.org/medias/isit-be.png" />
 
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
@@ -34,15 +58,24 @@
 </head>
 
 <body>
+  <nav class="lang-switcher" aria-label="Language">
+    <a href="/" hreflang="en" lang="en" aria-current="true">EN</a>
+    <a href="/fr/" hreflang="fr" lang="fr">FR</a>
+    <a href="/de/" hreflang="de" lang="de">DE</a>
+    <a href="/it/" hreflang="it" lang="it">IT</a>
+  </nav>
+
   <div class="large-content">
     <h1>European Institutes for Sustainable IT</h1>
   </div>
 
   <div id="conteneur">
     <div id="main-content">
-      <a href="https://isit-be.org" target="_blank" rel="noopener noreferrer" title="Access ISIT Belgium website - New Tab"><img class="isit-logo" src="medias/isit-be.png" alt="ISIT Belgium" /></a>
-      <a href="https://institutnr.org" target="_blank" rel="noopener noreferrer" title="Access INR France website - New Tab"><img class="isit-logo" src="medias/inr-fr.png" alt="INR France" /></a>
-      <a href="https://isit-ch.org/" target="_blank" rel="noopener noreferrer" title="Access INR Switzerland website - New Tab"><img class="isit-logo" src="medias/inr-ch.png" alt="INR Switzerland" /></a>
+      <div class="logos">
+        <a class="logo-link" href="https://isit-be.org" target="_blank" rel="noopener noreferrer" title="Access ISIT Belgium website - opens in new tab"><img class="isit-logo" src="medias/isit-be.png" width="709" height="200" alt="ISIT Belgium" fetchpriority="high" decoding="async" /></a>
+        <a class="logo-link" href="https://institutnr.org" target="_blank" rel="noopener noreferrer" title="Access INR France website - opens in new tab"><img class="isit-logo" src="medias/inr-fr.png" width="650" height="200" alt="INR France" fetchpriority="high" decoding="async" /></a>
+        <a class="logo-link" href="https://isit-ch.org/" target="_blank" rel="noopener noreferrer" title="Access ISIT Switzerland website - opens in new tab"><img class="isit-logo" src="medias/isit-ch.png" width="714" height="200" alt="ISIT Switzerland" fetchpriority="high" decoding="async" /></a>
+      </div>
       <h2>Purpose of Sustainable IT</h2>
       <p>
         Rethinking digital technologies aims to create a digital world that is sustainable for the planet, beneficial to the greatest number of people in a fair sharing of the value created. This operating principle is based on the 3Ps, the three pillars of sustainable IT: People, Planet, Prosperity.
@@ -66,16 +99,16 @@
       <div class="square-content">
         <h2>INR France</h2>
         <p>
-          Created in 2018, the INR France has more than 100 members and is helped in its action especially by The Nouvelle-Aquitaine Region, ADEME, Ministery of Environment and Interministerial Digital Direction.
+          Created in 2018, the INR France has more than 100 members and is helped in its action especially by The Nouvelle-Aquitaine Region, ADEME, Ministry of Environment and Interministerial Digital Direction.
         </p>
         <a href="https://institutnr.org" target="_blank" rel="noopener noreferrer" title="Access INR France website - New Tab">&rsaquo; Find out more</a>
       </div>
       <div class="square-content">
-        <h2>INR Switzerland</h2>
+        <h2>ISIT Switzerland</h2>
         <p>
           The Swiss Institute for Sustainable IT is a non-profit association founded in 2021 in partnership with the French INR and the Belgian ISIT. The Swiss ISIT is present in the French part of Switzerland and intends to develop initial-scale action to the whole country. In 2022, it has more than 25 members.
         </p>
-        <a href="https://isit-ch.org/" target="_blank" rel="noopener noreferrer" title="Access INR Switzerland website - New Tab">&rsaquo; Find out more</a>
+        <a href="https://isit-ch.org/" target="_blank" rel="noopener noreferrer" title="Access ISIT Switzerland website - New Tab">&rsaquo; Find out more</a>
       </div>
     </div>
   </div>
@@ -86,7 +119,7 @@
       <div class="one-project">
         <h2>WeNR</h2>
         <p>This tool enables any type of organisation to measure the footprint of their information system, to analyse where the impacts are and to measure their level of Sustainable IT maturity, based on the triptych People-Planet-Prosperity.</p>
-        <span class="project-unavailable">Project temporarily unavailable</span>
+        <a href="https://wenr.isit-europe.org/" target="_blank" rel="noopener noreferrer" title="Explore - Link to a New Tab">Explore the project</a>
       </div>
       <div class="one-project">
         <h2>Sustainable IT MOOC</h2>

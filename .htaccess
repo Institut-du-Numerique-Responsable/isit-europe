@@ -5,12 +5,96 @@ RewriteEngine on
 RewriteCond %{SERVER_PORT} 80
 RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
+# ----- Language auto-redirect (Accept-Language based) -----
+# Triggers only on root "/", skips bots and crawlers (preserves SEO).
+# 302 (temporary) so search engines still index each language URL independently.
+# Manual switcher always overrides because user lands on a specific /xx/ URL.
+<IfModule mod_headers.c>
+    # Tell shared caches that root response varies by language
+    <FilesMatch "^index\.html$">
+        Header append Vary "Accept-Language"
+    </FilesMatch>
+</IfModule>
+
+# Bot exclusion list (broad, case-insensitive)
+RewriteCond %{HTTP_USER_AGENT} (bot|crawler|spider|slurp|lighthouse|pingdom|uptimerobot|facebookexternalhit|twitterbot|linkedinbot|whatsapp|applebot|gtmetrix|pagespeed) [NC]
+RewriteRule ^$ - [L]
+
+# French speakers → /fr/
+RewriteCond %{REQUEST_URI} ^/$
+RewriteCond %{HTTP:Accept-Language} ^fr [NC]
+RewriteRule ^$ /fr/ [R=302,L]
+
+# German speakers → /de/
+RewriteCond %{REQUEST_URI} ^/$
+RewriteCond %{HTTP:Accept-Language} ^de [NC]
+RewriteRule ^$ /de/ [R=302,L]
+
+# Italian speakers → /it/
+RewriteCond %{REQUEST_URI} ^/$
+RewriteCond %{HTTP:Accept-Language} ^it [NC]
+RewriteRule ^$ /it/ [R=302,L]
+# Anything else (including en-*, unknown) → keep English root
+# ----------------------------------------------------------
+
 # Security headers
 <IfModule mod_headers.c>
-    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+    Header always set X-Frame-Options "DENY"
     Header always set X-Content-Type-Options "nosniff"
-    Header always set X-XSS-Protection "1; mode=block"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
-    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
-    Header always set Content-Security-Policy "default-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; script-src 'none'; frame-ancestors 'none';"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()"
+    Header always set Content-Security-Policy "default-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; script-src 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+    Header always set Cross-Origin-Opener-Policy "same-origin"
+    Header always set Cross-Origin-Resource-Policy "same-origin"
+    Header unset X-Powered-By
+    Header unset Server
 </IfModule>
+
+# Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/json application/javascript image/svg+xml application/xhtml+xml
+</IfModule>
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/plain text/xml application/xml application/json application/javascript image/svg+xml application/xhtml+xml
+</IfModule>
+
+# Cache control
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault                              "access plus 1 month"
+    ExpiresByType text/html                     "access plus 0 seconds"
+    ExpiresByType text/css                      "access plus 1 year"
+    ExpiresByType image/png                     "access plus 1 year"
+    ExpiresByType image/jpeg                    "access plus 1 year"
+    ExpiresByType image/svg+xml                 "access plus 1 year"
+    ExpiresByType image/x-icon                  "access plus 1 year"
+    ExpiresByType font/woff2                    "access plus 1 year"
+    ExpiresByType application/font-woff2        "access plus 1 year"
+    ExpiresByType application/xml               "access plus 1 day"
+    ExpiresByType text/xml                      "access plus 1 day"
+</IfModule>
+
+# Long-cache static assets with immutable hint
+<IfModule mod_headers.c>
+    <FilesMatch "\.(woff2|png|jpe?g|svg|ico)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.css$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.html$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+</IfModule>
+
+# Block hidden files
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Disable directory listing
+Options -Indexes
+
+# Custom error page (optional)
+ErrorDocument 404 /index.html
