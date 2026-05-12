@@ -32,6 +32,17 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+:root { color-scheme: light dark; }
+
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
 * {box-sizing: border-box;padding:0;margin:0;}
 
 body {
@@ -292,4 +303,16 @@ section h2 {
 [type=submit]:focus, [type=search]:focus, [type=text]:focus, select:focus, a:focus {
     outline: .2rem dashed #144b65;
     outline-offset: .3rem;
+}
+
+/* Print */
+@media print {
+	nav.lang-switcher, footer { display: none; }
+	body { background: #fff; color: #000; font-size: 12pt; }
+	div#conteneur { width: 100%; max-width: none; padding: 0; display: block; }
+	#main-content, #side-content { width: 100%; }
+	.square-content, .one-project { page-break-inside: avoid; }
+	a, a:visited { color: #000; text-decoration: underline; }
+	a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; }
+	.logos img { max-width: 200px; }
 }
