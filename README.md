@@ -10,7 +10,7 @@ The network brings together three non-profit organisations working to reduce the
 
 ## Languages
 
-Available in four languages — root is English (default for `x-default`):
+Available in five languages — root is English (default for `x-default`):
 
 | Language | URL | `hreflang` |
 | --- | --- | --- |
@@ -18,6 +18,7 @@ Available in four languages — root is English (default for `x-default`):
 | 🇫🇷 Français | <https://isit-europe.org/fr/> | `fr` |
 | 🇩🇪 Deutsch | <https://isit-europe.org/de/> | `de` |
 | 🇮🇹 Italiano | <https://isit-europe.org/it/> | `it` |
+| 🇪🇸 Español | <https://isit-europe.org/es/> | `es` |
 
 Each translation lives in its own subdirectory with full `hreflang` cross-references, localised Open Graph / Twitter Card / JSON-LD metadata, and an in-page language switcher (`.lang-switcher`).
 
@@ -38,6 +39,9 @@ isit-europe/
 │   ├── index.html
 │   └── legal-notices.html
 ├── it/                      # Italian version
+│   ├── index.html
+│   └── legal-notices.html
+├── es/                      # Spanish version
 │   ├── index.html
 │   └── legal-notices.html
 ├── robots.txt               # Search engine directives
@@ -94,14 +98,14 @@ isit-europe/
 
 ### SEO
 - Canonical URL on every page
-- `hreflang` alternates (`en`, `fr`, `de`, `it`, `x-default`) on every page **and** in `sitemap.xml`
+- `hreflang` alternates (`en`, `fr`, `de`, `it`, `es`, `x-default`) on every page **and** in `sitemap.xml`
 - Open Graph + Twitter Card with localised `og:locale`
 - Schema.org JSON-LD (`Organization` for homepages, `WebPage` for legal pages)
 - One `<h1>` per page, meta description 120–160 chars, title ≤ 70 chars
 
 ### GDPR
 - No personal data collected, no form, no cookie, no third-party request
-- Privacy policy translated into the four languages, with the full GDPR rights enumeration (access, rectification, erasure, restriction, portability, objection)
+- Privacy policy translated into five languages, with the full GDPR rights enumeration (access, rectification, erasure, restriction, portability, objection)
 - Dedicated DPO contact (`dpo@institutnr.org`)
 - CNIL (French data-protection authority) reference
 
@@ -117,7 +121,7 @@ For **Nginx / GitHub Pages / Netlify**: port the `.htaccess` directives to the c
 
 Each language ships its own legal-notices page:
 
-- [EN](./legal-notices.html) — [FR](./fr/legal-notices.html) — [DE](./de/legal-notices.html) — [IT](./it/legal-notices.html)
+- [EN](./legal-notices.html) — [FR](./fr/legal-notices.html) — [DE](./de/legal-notices.html) — [IT](./it/legal-notices.html) — [ES](./es/legal-notices.html)
 
 ## Licence
 

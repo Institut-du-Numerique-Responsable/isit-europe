@@ -260,6 +260,12 @@ footer {
 
 @media (prefers-color-scheme: dark) {
     .footer-content a { color: #5da9cc; }
+    .logo-link {
+        background: #c8e8f4;
+        border-radius: 8px;
+        padding: 10px 14px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    }
 }
 
 .footer-content a:hover {
