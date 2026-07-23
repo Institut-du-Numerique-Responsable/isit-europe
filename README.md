@@ -30,31 +30,45 @@ Requests to `/` are redirected (`302`) to the matching language subdirectory bas
 
 ```
 isit-europe/
-├── index.html               # Main page (EN, default)
-├── legal-notices.html       # Legal notices & privacy policy (EN)
-├── fr/                      # French version
+├── index.html                        # Main page (EN, default)
+├── legal-notices.html                # Legal notices & privacy policy (EN)
+├── accessibility-declaration.html    # Accessibility statement (EN, WCAG 2.1 AA)
+├── fr/                                # French version
 │   ├── index.html
-│   └── legal-notices.html
-├── de/                      # German version
+│   ├── legal-notices.html
+│   └── declaration-accessibilite.html  # RGAA-structured, French legal recourse
+├── de/                                # German version
 │   ├── index.html
-│   └── legal-notices.html
-├── it/                      # Italian version
+│   ├── legal-notices.html
+│   └── barrierefreiheitserklaerung.html
+├── it/                                # Italian version
 │   ├── index.html
-│   └── legal-notices.html
-├── es/                      # Spanish version
+│   ├── legal-notices.html
+│   └── dichiarazione-di-accessibilita.html
+├── es/                                # Spanish version
 │   ├── index.html
-│   └── legal-notices.html
-├── robots.txt               # Search engine directives
-├── sitemap.xml              # XML sitemap (all 4 languages, hreflang alternates)
-├── .htaccess                # Apache: HTTPS, security headers, cache, gzip/brotli, language auto-redirect
+│   ├── legal-notices.html
+│   └── declaracion-de-accesibilidad.html
+├── pages/
+│   ├── monitoring.html               # Self-hosted uptime/SEO/eco-design dashboard (noindex, client-side only)
+│   └── monitoring.js                 # Dashboard logic (external, CSP script-src 'self')
+├── robots.txt                        # Search engine directives
+├── sitemap.xml                       # XML sitemap (all 5 languages, reciprocal hreflang alternates)
+├── .htaccess                         # Apache: HTTPS, security headers, cache, gzip/brotli, language auto-redirect, CSP
 ├── css/
-│   └── stylesheet.css       # Main stylesheet (includes self-hosted font declarations)
-├── fonts/                   # Self-hosted Open Sans (GDPR compliant, no Google Fonts)
+│   └── stylesheet.css                # Main stylesheet (includes self-hosted font declarations)
+├── js/
+│   └── matomo.js                     # Cookieless Matomo analytics loader (external, CSP script-src 'self')
+├── fonts/                            # Self-hosted Open Sans (GDPR compliant, no Google Fonts)
 │   ├── open-sans-400-latin.woff2
 │   ├── open-sans-400-latin-ext.woff2
 │   ├── open-sans-800-latin.woff2
 │   └── open-sans-800-latin-ext.woff2
-└── medias/                  # Organisation logos (uniform 200 px height, quantised PNG, transparent background)
+├── logos-resized/                    # Aspect-ratio-correct partner logos for the homepage strip (AVIF/WebP/PNG)
+│   ├── isit-be.{avif,webp,png}
+│   ├── inr-fr.{avif,webp,png}
+│   └── isit-ch.{avif,webp,png}
+└── medias/                           # Full-size organisation logos and favicon
     ├── isit-be.png
     ├── inr-fr.png
     ├── isit-ch.png
@@ -64,14 +78,15 @@ isit-europe/
 ## Technical choices
 
 ### Architecture
-- **Static HTML** — no CMS, no JavaScript, no build step, no runtime dependency
+- **Static HTML** — no CMS, no build step, no server-side runtime
+- **JavaScript kept minimal and external** — no framework; the only scripts are `js/matomo.js` (analytics loader) and `pages/monitoring.js` (internal dashboard), both same-origin files, never inline (required by the CSP below)
 - **Self-hosted fonts** — Open Sans served locally, no request to Google Fonts (GDPR)
-- **Zero cookies** — no analytics, no tracking, no third-party request
+- **Zero cookies** — Matomo runs in `disableCookies` mode; no cookie of any kind is set, no third-party tracker beyond the self-hosted Matomo instance
 - **Preloaded critical fonts** — `<link rel="preload" as="font" crossorigin>` for LCP
 
 ### Security headers (`.htaccess`)
 - `Strict-Transport-Security` (HSTS, 2 years, includeSubDomains, preload)
-- `Content-Security-Policy` — `default-src 'self'`, `script-src 'none'`, `object-src 'none'`, `frame-ancestors 'none'`, `base-uri 'self'`, `form-action 'self'`, `upgrade-insecure-requests`
+- `Content-Security-Policy` — `default-src 'self'`, `script-src 'self' https://analytic.institutnr.org:8443`, `connect-src 'self' https://analytic.institutnr.org:8443`, `object-src 'none'`, `frame-ancestors 'none'`, `base-uri 'self'`, `form-action 'self'`, `upgrade-insecure-requests`. All scripts must be external same-origin files (or the explicitly allow-listed Matomo host) — inline `<script>` blocks are blocked and will silently fail; this bit the team once already (Matomo and the monitoring dashboard were dead in production until the policy was relaxed from `script-src 'none'`), watch for it when adding new scripts.
 - `X-Frame-Options: DENY`
 - `X-Content-Type-Options: nosniff`
 - `Referrer-Policy: strict-origin-when-cross-origin`
@@ -122,6 +137,22 @@ For **Nginx / GitHub Pages / Netlify**: port the `.htaccess` directives to the c
 Each language ships its own legal-notices page:
 
 - [EN](./legal-notices.html) — [FR](./fr/legal-notices.html) — [DE](./de/legal-notices.html) — [IT](./it/legal-notices.html) — [ES](./es/legal-notices.html)
+
+## Accessibility
+
+Target: WCAG 2.1 level AA. Current status is **partial conformance**, based on an internal manual review (semantic structure, colour contrast, keyboard navigation, alt text, focus visibility) — not a formal third-party RGAA audit against the full 106-criteria grid, so no compliance percentage is claimed.
+
+- [EN](./accessibility-declaration.html) — [FR](./fr/declaration-accessibilite.html) *(full RGAA structure incl. Défenseur des droits recourse)* — [DE](./de/barrierefreiheitserklaerung.html) — [IT](./it/dichiarazione-di-accessibilita.html) — [ES](./es/declaracion-de-accesibilidad.html)
+
+## Monitoring
+
+[`pages/monitoring.html`](./pages/monitoring.html) is a self-hosted, client-side dashboard that runs same-origin `fetch()` checks (SEO, eco-design, page/asset availability) directly in the browser — no build, no backend. It is deliberately `noindex, nofollow` and disallowed in `robots.txt`, since it is an operational tool, not public content.
+
+It **must be served over HTTP(S)** (deployed site, or a local static server such as `python3 -m http.server`) — opening the file directly (`file://`) breaks every check, since `fetch()` cannot resolve same-origin relative paths without a real origin.
+
+## Contributing
+
+Contributions are welcome, **via pull request only** — direct pushes to `main` are not accepted. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full workflow: fork, branch, follow the project's code standards, sign your commits (Developer Certificate of Origin), then open a PR.
 
 ## Licence
 
