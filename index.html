@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>ISIT Europe | The European network of Institutes for Sustainable IT</title>
-    <meta name="description" content="ISIT Europe brings together Belgian, French and Swiss Institutes for Sustainable IT to reduce the environmental and social footprint of digital services." />
+    <title>ISIT Europe | European Network of Sustainable IT Institutes</title>
+    <meta name="description" content="ISIT Europe connects Belgian, French and Swiss sustainable IT institutes to reduce the environmental and social impact of digital technology." />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#357692">
     <link rel="canonical" href="https://isit-europe.org/" />
@@ -23,10 +23,49 @@
     <link rel="preload" href="fonts/open-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/open-sans-800-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="preconnect" href="https://analytic.institutnr.org:8443">
+
+    <!-- Social sharing buttons -->
+    <style>
+        .social-sharing {
+            margin: 24px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .social-sharing a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background-color: #357692;
+            color: #fff;
+            border-radius: 50%;
+            text-decoration: none;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .social-sharing a svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .social-sharing a:hover,
+        .social-sharing a:focus-visible {
+            background-color: #007897;
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.24);
+        }
+    </style>
 
     <!-- Open Graph -->
-    <meta property="og:title" content="ISIT Europe | The European network of Institutes for Sustainable IT" />
-    <meta property="og:description" content="ISIT Europe brings together organisations to reduce the environmental and social footprint of IT services across Belgium, France and Switzerland." />
+    <meta property="og:title" content="ISIT Europe | European Network of Sustainable IT Institutes" />
+    <meta property="og:description" content="ISIT Europe brings together organisations to reduce the environmental and social footprint of IT services across Belgium, France and Switzerland. Learn about sustainable digital practices." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://isit-europe.org/" />
     <meta property="og:locale" content="en_GB" />
@@ -41,8 +80,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="ISIT Europe | The European network of Institutes for Sustainable IT" />
-    <meta name="twitter:description" content="ISIT Europe brings together Belgian, French and Swiss Institutes for Sustainable IT." />
+    <meta name="twitter:title" content="ISIT Europe | European Network of Sustainable IT Institutes" />
+    <meta name="twitter:description" content="Learn about sustainable IT practices connecting Belgian, French and Swiss institutes to reduce environmental impact with ISIT Europe." />
     <meta name="twitter:image" content="https://isit-europe.org/medias/isit-be.png" />
 
     <!-- Schema.org structured data -->
@@ -51,7 +90,7 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "ISIT Europe",
-      "description": "The European network of Institutes for Sustainable IT — Belgium, France and Switzerland.",
+      "description": "The European network of Institutes for Sustainable IT - Belgium, France and Switzerland.",
       "url": "https://isit-europe.org",
       "foundingDate": "2014",
       "logo": "https://isit-europe.org/medias/favicon.png",
@@ -67,6 +106,9 @@
       ]
     }
     </script>
+    <!-- Matomo -->
+    <script defer src="/js/matomo.js"></script>
+    <!-- End Matomo Code -->
 </head>
 
 <body>
@@ -87,9 +129,9 @@
   <div id="conteneur">
     <main id="main-content">
       <div class="logos">
-        <a class="logo-link" href="https://isit-be.org" target="_blank" rel="noopener noreferrer" title="Access ISIT Belgium website - opens in new tab"><picture><source srcset="medias/isit-be.avif" type="image/avif"><source srcset="medias/isit-be.webp" type="image/webp"><img class="isit-logo" src="medias/isit-be.png" srcset="medias/isit-be.png 1x" width="709" height="200" alt="ISIT Belgium" fetchpriority="high" decoding="async" /></picture></a>
-        <a class="logo-link" href="https://institutnr.org" target="_blank" rel="noopener noreferrer" title="Access INR France website - opens in new tab"><picture><source srcset="medias/inr-fr.avif" type="image/avif"><source srcset="medias/inr-fr.webp" type="image/webp"><img class="isit-logo" src="medias/inr-fr.png" srcset="medias/inr-fr.png 1x" width="650" height="200" alt="INR France" fetchpriority="high" decoding="async" /></picture></a>
-        <a class="logo-link" href="https://isit-ch.org/" target="_blank" rel="noopener noreferrer" title="Access ISIT Switzerland website - opens in new tab"><picture><source srcset="medias/isit-ch.avif" type="image/avif"><source srcset="medias/isit-ch.webp" type="image/webp"><img class="isit-logo" src="medias/isit-ch.png" srcset="medias/isit-ch.png 1x" width="714" height="200" alt="ISIT Switzerland" fetchpriority="high" decoding="async" /></picture></a>
+        <a class="logo-link" href="https://isit-be.org" target="_blank" rel="noopener noreferrer" title="Access ISIT Belgium website - opens in new tab"><picture><source srcset="logos-resized/isit-be.avif" type="image/avif"><source srcset="logos-resized/isit-be.webp" type="image/webp"><img class="isit-logo" src="logos-resized/isit-be.png" alt="ISIT Belgium" width="212" height="60" fetchpriority="high" decoding="async" /></picture></a>
+        <a class="logo-link" href="https://institutnr.org" target="_blank" rel="noopener noreferrer" title="Access INR France website - opens in new tab"><picture><source srcset="logos-resized/inr-fr.avif" type="image/avif"><source srcset="logos-resized/inr-fr.webp" type="image/webp"><img class="isit-logo" src="logos-resized/inr-fr.png" alt="INR France" width="195" height="60" fetchpriority="high" decoding="async" /></picture></a>
+        <a class="logo-link" href="https://isit-ch.org/" target="_blank" rel="noopener noreferrer" title="Access ISIT Switzerland website - opens in new tab"><picture><source srcset="logos-resized/isit-ch.avif" type="image/avif"><source srcset="logos-resized/isit-ch.webp" type="image/webp"><img class="isit-logo" src="logos-resized/isit-ch.png" alt="ISIT Switzerland" width="214" height="60" fetchpriority="high" decoding="async" /></picture></a>
       </div>
       <h2>Purpose of Sustainable IT</h2>
       <p>
@@ -126,6 +168,18 @@
         <a href="https://isit-ch.org/" target="_blank" rel="noopener noreferrer" title="Access ISIT Switzerland website - New Tab">&rsaquo; Find out more</a>
       </div>
     </aside>
+  </div>
+
+  <div class="social-sharing" role="region" aria-label="Partagez cette page sur les réseaux sociaux">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://isit-europe.org/" target="_blank" rel="noopener noreferrer" aria-label="Partager sur Facebook">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.5 9H15V6.5h-1.5C11.6 6.5 10 8.1 10 10.1V12H8v3h2v6h3v-6h2.2l.8-3H13v-1.6c0-.6.4-1.4 1.5-1.4z"/></svg>
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://isit-europe.org/&text=ISIT%20Europe%20-%20European%20Network%20of%20Sustainable%20IT%20Institutes" target="_blank" rel="noopener noreferrer" aria-label="Partager sur X (Twitter)">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://isit-europe.org/&title=ISIT%20Europe" target="_blank" rel="noopener noreferrer" aria-label="Partager sur LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.94 8.5H4.56V19h2.38V8.5zM5.75 4.5a1.38 1.38 0 100 2.75 1.38 1.38 0 000-2.75zM19.44 19h-2.38v-5.4c0-1.29-.46-2.17-1.6-2.17-.87 0-1.39.59-1.62 1.15-.08.2-.1.48-.1.76V19h-2.38s.03-9.53 0-10.5h2.38v1.49c.32-.49.88-1.19 2.14-1.19 1.56 0 2.73 1.02 2.73 3.2V19z"/></svg>
+    </a>
   </div>
 
   <div class="large-content">
@@ -171,12 +225,17 @@
         <p>The ISIT network in Europe launches the directory of sustainable IT experts. This tool aims to facilitate the search for qualified profiles able to support the structuring and development of the sustainable IT approach of organisations.</p>
         <a href="https://experts.isit-europe.org" target="_blank" rel="noopener noreferrer" title="Explore - Link to a New Tab">Explore the project</a>
       </div>
+      <div class="one-project">
+        <h3>Open Source on GitHub</h3>
+        <p>We publish open-source skills and rules for AI assistants: green-claude, freely available to everyone, and skill-nr (eco-design and digital responsibility rules for AI assistants), reserved for ISIT and INR members - plus many other projects.</p>
+        <a href="https://github.com/Institut-du-Numerique-Responsable" target="_blank" rel="noopener noreferrer" title="Explore - Link to a New Tab">Explore the project</a>
+      </div>
     </div>
   </div>
 
   <footer>
     <div class="footer-content">
-      <p>&copy; 2026 ISIT Europe — <a href="/legal-notices.html">Legal Notices &amp; Privacy Policy</a></p>
+      <p>&copy; 2026 ISIT Europe · <a href="/legal-notices.html">Legal Notices &amp; Privacy Policy</a> · <a href="/accessibility-declaration.html">Accessibility</a> · <a href="/pages/monitoring.html" rel="nofollow">Monitoring</a></p>
     </div>
   </footer>
 

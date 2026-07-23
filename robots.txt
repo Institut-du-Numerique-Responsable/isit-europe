@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /pages/monitoring.html
 
 Sitemap: https://isit-europe.org/sitemap.xml

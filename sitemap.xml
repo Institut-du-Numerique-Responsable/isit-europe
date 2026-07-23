@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://isit-europe.org/</loc>
-    <lastmod>2026-05-31</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/" />
@@ -17,7 +17,7 @@
 
   <url>
     <loc>https://isit-europe.org/fr/</loc>
-    <lastmod>2026-05-31</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/" />
@@ -30,7 +30,7 @@
 
   <url>
     <loc>https://isit-europe.org/de/</loc>
-    <lastmod>2026-05-31</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/" />
@@ -43,7 +43,20 @@
 
   <url>
     <loc>https://isit-europe.org/it/</loc>
-    <lastmod>2026-05-31</lastmod>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isit-europe.org/fr/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://isit-europe.org/de/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://isit-europe.org/it/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://isit-europe.org/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isit-europe.org/" />
+  </url>
+
+  <url>
+    <loc>https://isit-europe.org/es/</loc>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/" />
@@ -56,7 +69,7 @@
 
   <url>
     <loc>https://isit-europe.org/legal-notices.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/legal-notices.html" />
@@ -69,43 +82,119 @@
 
   <url>
     <loc>https://isit-europe.org/fr/legal-notices.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isit-europe.org/fr/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://isit-europe.org/de/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://isit-europe.org/it/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://isit-europe.org/es/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isit-europe.org/legal-notices.html" />
   </url>
 
   <url>
     <loc>https://isit-europe.org/de/legal-notices.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isit-europe.org/fr/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://isit-europe.org/de/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://isit-europe.org/it/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://isit-europe.org/es/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isit-europe.org/legal-notices.html" />
   </url>
 
   <url>
     <loc>https://isit-europe.org/it/legal-notices.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
-  </url>
-
-  <url>
-    <loc>https://isit-europe.org/es/</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://isit-europe.org/fr/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://isit-europe.org/de/" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://isit-europe.org/it/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://isit-europe.org/es/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://isit-europe.org/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isit-europe.org/fr/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://isit-europe.org/de/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://isit-europe.org/it/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://isit-europe.org/es/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isit-europe.org/legal-notices.html" />
   </url>
 
   <url>
     <loc>https://isit-europe.org/es/legal-notices.html</loc>
-    <lastmod>2026-05-31</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isit-europe.org/fr/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://isit-europe.org/de/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://isit-europe.org/it/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://isit-europe.org/es/legal-notices.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isit-europe.org/legal-notices.html" />
+  </url>
+
+  <url>
+    <loc>https://isit-europe.org/accessibility-declaration.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/accessibility-declaration.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isit-europe.org/fr/declaration-accessibilite.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://isit-europe.org/de/barrierefreiheitserklaerung.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://isit-europe.org/it/dichiarazione-di-accessibilita.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://isit-europe.org/es/declaracion-de-accesibilidad.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isit-europe.org/accessibility-declaration.html" />
+  </url>
+
+  <url>
+    <loc>https://isit-europe.org/fr/declaration-accessibilite.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/accessibility-declaration.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isit-europe.org/fr/declaration-accessibilite.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://isit-europe.org/de/barrierefreiheitserklaerung.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://isit-europe.org/it/dichiarazione-di-accessibilita.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://isit-europe.org/es/declaracion-de-accesibilidad.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isit-europe.org/accessibility-declaration.html" />
+  </url>
+
+  <url>
+    <loc>https://isit-europe.org/de/barrierefreiheitserklaerung.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/accessibility-declaration.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isit-europe.org/fr/declaration-accessibilite.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://isit-europe.org/de/barrierefreiheitserklaerung.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://isit-europe.org/it/dichiarazione-di-accessibilita.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://isit-europe.org/es/declaracion-de-accesibilidad.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isit-europe.org/accessibility-declaration.html" />
+  </url>
+
+  <url>
+    <loc>https://isit-europe.org/it/dichiarazione-di-accessibilita.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/accessibility-declaration.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isit-europe.org/fr/declaration-accessibilite.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://isit-europe.org/de/barrierefreiheitserklaerung.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://isit-europe.org/it/dichiarazione-di-accessibilita.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://isit-europe.org/es/declaracion-de-accesibilidad.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isit-europe.org/accessibility-declaration.html" />
+  </url>
+
+  <url>
+    <loc>https://isit-europe.org/es/declaracion-de-accesibilidad.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/accessibility-declaration.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isit-europe.org/fr/declaration-accessibilite.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://isit-europe.org/de/barrierefreiheitserklaerung.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://isit-europe.org/it/dichiarazione-di-accessibilita.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://isit-europe.org/es/declaracion-de-accesibilidad.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isit-europe.org/accessibility-declaration.html" />
   </url>
 
 </urlset>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoring | ISIT Europe</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="../medias/favicon.png">
+  <style>
+    * { box-sizing:border-box; }
+    body { background:#0f172a; color:#e2e8f0; font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif; margin:0; }
+    .mon-wrap { max-width:1200px; margin:0 auto; padding:32px 24px; }
+    .mon-back { color:#93c5fd; text-decoration:none; font-size:0.9rem; display:inline-block; margin-bottom:16px; }
+    .mon-back:hover, .mon-back:focus-visible { text-decoration:underline; }
+    .mon-header { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-bottom:24px; }
+    .mon-header h1 { color:#fff; font-size:1.8rem; margin:0; }
+    .mon-brand { display:flex; align-items:center; gap:20px; padding:12px 0 20px; border-bottom:1px solid #334155; margin-bottom:24px; }
+    .mon-brand img { height:32px; width:auto; filter:brightness(0) invert(1); opacity:0.92; }
+    .mon-brand .sep { color:#475569; font-size:0.9rem; }
+    .mon-brand .label { color:#94a3b8; font-size:0.82rem; margin-left:auto; }
+    .mon-summary { display:flex; gap:12px; flex-wrap:wrap; }
+    .mon-pill { padding:8px 16px; border-radius:999px; font-weight:700; font-size:0.9rem; display:inline-flex; align-items:center; gap:8px; }
+    .mon-pill.ok { background:#064e3b; color:#6ee7b7; }
+    .mon-pill.ko { background:#7f1d1d; color:#fca5a5; }
+    .mon-pill.run { background:#1e3a8a; color:#93c5fd; }
+    .mon-pill.idle { background:#334155; color:#cbd5e1; }
+    .mon-pill.score { background:#312e81; color:#c7d2fe; }
+    .mon-controls { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:24px; }
+    .mon-btn { background:#3b82f6; color:#fff; border:0; padding:10px 18px; border-radius:8px; font-weight:600; cursor:pointer; font-size:0.95rem; }
+    .mon-btn:hover { background:#2563eb; }
+    .mon-btn.secondary { background:#475569; }
+    .mon-btn.secondary:hover { background:#64748b; }
+    .mon-btn.auto-on { background:#059669; }
+    .mon-meta { color:#94a3b8; font-size:0.85rem; }
+    .mon-section { background:#1e293b; border:1px solid #334155; border-radius:12px; padding:20px 24px; margin-bottom:20px; }
+    .mon-section h2 { color:#fff; font-size:1.1rem; margin:0 0 16px; padding-bottom:12px; border-bottom:1px solid #334155; display:flex; justify-content:space-between; align-items:center; }
+    .mon-section h2 .count { font-size:0.75rem; font-weight:600; color:#94a3b8; }
+    table.mon-table { width:100%; border-collapse:collapse; font-size:0.9rem; }
+    .mon-table th { text-align:left; color:#94a3b8; font-weight:600; padding:8px 12px; border-bottom:1px solid #334155; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em; }
+    .mon-table td { padding:10px 12px; border-bottom:1px solid #1e293b; vertical-align:middle; }
+    .mon-table tr:hover td { background:#0f172a; }
+    .status-dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:8px; vertical-align:middle; }
+    .status-dot.ok { background:#10b981; box-shadow:0 0 8px #10b98180; }
+    .status-dot.ko { background:#ef4444; box-shadow:0 0 8px #ef444480; }
+    .status-dot.run { background:#3b82f6; animation:pulse 1s infinite; }
+    .status-dot.idle { background:#475569; }
+    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+    .mon-url { font-family:'SF Mono',Menlo,monospace; font-size:0.82rem; color:#cbd5e1; word-break:break-all; }
+    .mon-detail { color:#94a3b8; font-size:0.82rem; }
+    .mon-time { color:#64748b; font-family:'SF Mono',Menlo,monospace; font-size:0.78rem; }
+    .mon-status-code { font-weight:700; font-family:'SF Mono',Menlo,monospace; }
+    .mon-status-code.ok { color:#6ee7b7; }
+    .mon-status-code.ko { color:#fca5a5; }
+    .mon-table tr.row-ko td { background:rgba(127,29,29,0.13); }
+    .mon-footer { color:#64748b; font-size:0.82rem; text-align:center; margin-top:32px; }
+    .mon-footer a { color:#3b82f6; }
+  </style>
+</head>
+<body>
+  <main class="mon-wrap">
+    <p><a href="/" class="mon-back">&larr; Retour au site isit-europe.org</a></p>
+    <div class="mon-brand">
+      <img src="../medias/favicon.png" alt="ISIT Europe" width="32" height="32" loading="lazy">
+      <span class="sep">×</span>
+      <span class="label">Réseau ISIT Belgique / INR France / ISIT Suisse - EN / FR / DE / IT / ES</span>
+    </div>
+
+    <div class="mon-header">
+      <h1>🩺 Monitoring | ISIT Europe</h1>
+      <div class="mon-summary">
+        <span class="mon-pill score idle">◎ <span id="sumScore">-</span></span>
+        <span class="mon-pill ok">✓ <span id="sumOk">0</span> OK</span>
+        <span class="mon-pill ko">✗ <span id="sumKo">0</span> KO</span>
+        <span class="mon-pill run">⟳ <span id="sumRun">0</span> en cours</span>
+        <span class="mon-pill idle">∑ <span id="sumTotal">0</span> total</span>
+      </div>
+    </div>
+
+    <div class="mon-controls">
+      <button class="mon-btn" id="runBtn" type="button">▶ Lancer tous les checks</button>
+      <button class="mon-btn secondary" id="autoBtn" type="button">⏱ Auto-refresh : OFF</button>
+      <button class="mon-btn secondary" id="copyBtn" type="button">📋 Copier le rapport</button>
+      <span class="mon-meta">Dernière exécution : <span id="lastRun">-</span> (<span id="lastDuration">-</span>) · Refresh dans : <span id="countdown">-</span></span>
+    </div>
+
+    <section class="mon-section">
+      <h2>SEO &amp; configuration <span class="count" id="cntSeo">0/0</span></h2>
+      <table class="mon-table"><thead><tr><th></th><th>Check</th><th>Cible</th><th>Statut</th><th>Détail</th></tr></thead><tbody id="tblSeo"></tbody></table>
+    </section>
+
+    <section class="mon-section">
+      <h2>Écoconception <span class="count" id="cntEco">0/0</span></h2>
+      <table class="mon-table"><thead><tr><th></th><th>Check</th><th>Cible</th><th>Statut</th><th>Détail</th></tr></thead><tbody id="tblEco"></tbody></table>
+    </section>
+
+    <section class="mon-section">
+      <h2>Pages du site <span class="count" id="cntPages">0/0</span></h2>
+      <table class="mon-table"><thead><tr><th></th><th>Lang</th><th>URL</th><th>Code</th><th>Temps</th><th>Détail</th></tr></thead><tbody id="tblPages"></tbody></table>
+    </section>
+
+    <section class="mon-section">
+      <h2>Assets statiques <span class="count" id="cntAssets">0/0</span></h2>
+      <table class="mon-table"><thead><tr><th></th><th>Type</th><th>URL</th><th>Code</th><th>Taille</th><th>Détail</th></tr></thead><tbody id="tblAssets"></tbody></table>
+    </section>
+
+    <p class="mon-footer">
+      Page non indexée. Tous les checks tournent côté client (fetch same-origin).<br>
+      ISIT Europe · <a href="https://institutnr.org" target="_blank" rel="noopener">Institut du Numérique Responsable (INR)</a> ·
+      <a href="https://isit-be.org" target="_blank" rel="noopener">ISIT Belgium</a> ·
+      <a href="https://isit-ch.org" target="_blank" rel="noopener">ISIT Switzerland</a> ·
+      <a href="https://github.com/Institut-du-Numerique-Responsable" target="_blank" rel="noopener">GitHub</a>.
+    </p>
+  </main>
+
+<script defer src="monitoring.js"></script>
+</body>
+</html>

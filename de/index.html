@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>ISIT Europe | Europäisches Netzwerk der Institute für nachhaltige IT</title>
-    <meta name="description" content="ISIT Europe vereint die belgischen, französischen und schweizerischen Institute für nachhaltige IT, um den ökologischen und sozialen Fußabdruck digitaler Dienste zu verringern." />
+    <meta name="description" content="ISIT Europe vereint belgische, französische und schweizerische Institute für nachhaltige IT und verringert deren ökologischen Fußabdruck." />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#357692">
     <link rel="canonical" href="https://isit-europe.org/de/" />
@@ -23,6 +23,45 @@
     <link rel="preload" href="../fonts/open-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/open-sans-800-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="preconnect" href="https://analytic.institutnr.org:8443">
+
+    <!-- Social sharing buttons -->
+    <style>
+        .social-sharing {
+            margin: 24px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .social-sharing a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background-color: #357692;
+            color: #fff;
+            border-radius: 50%;
+            text-decoration: none;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .social-sharing a svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .social-sharing a:hover,
+        .social-sharing a:focus-visible {
+            background-color: #007897;
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.24);
+        }
+    </style>
 
     <!-- Open Graph -->
     <meta property="og:title" content="ISIT Europe | Europäisches Netzwerk der Institute für nachhaltige IT" />
@@ -52,7 +91,7 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "ISIT Europe",
-      "description": "Das europäische Netzwerk der Institute für nachhaltige IT — Belgien, Frankreich und Schweiz.",
+      "description": "Das europäische Netzwerk der Institute für nachhaltige IT - Belgien, Frankreich und Schweiz.",
       "url": "https://isit-europe.org/de/",
       "foundingDate": "2014",
       "logo": "https://isit-europe.org/medias/favicon.png",
@@ -68,6 +107,9 @@
       ]
     }
     </script>
+    <!-- Matomo -->
+    <script defer src="/js/matomo.js"></script>
+    <!-- End Matomo Code -->
 </head>
 
 <body>
@@ -88,13 +130,13 @@
   <div id="conteneur">
     <main id="main-content">
       <div class="logos">
-        <a class="logo-link" href="https://isit-be.org" target="_blank" rel="noopener noreferrer" title="ISIT Belgium Website öffnen - öffnet in neuem Tab"><picture><source srcset="../medias/isit-be.avif" type="image/avif"><source srcset="../medias/isit-be.webp" type="image/webp"><img class="isit-logo" src="../medias/isit-be.png" srcset="../medias/isit-be.png 1x" width="709" height="200" alt="ISIT Belgium" fetchpriority="high" decoding="async" /></picture></a>
-        <a class="logo-link" href="https://institutnr.org" target="_blank" rel="noopener noreferrer" title="INR France Website öffnen - öffnet in neuem Tab"><picture><source srcset="../medias/inr-fr.avif" type="image/avif"><source srcset="../medias/inr-fr.webp" type="image/webp"><img class="isit-logo" src="../medias/inr-fr.png" srcset="../medias/inr-fr.png 1x" width="650" height="200" alt="INR France" fetchpriority="high" decoding="async" /></picture></a>
-        <a class="logo-link" href="https://isit-ch.org/" target="_blank" rel="noopener noreferrer" title="ISIT Switzerland Website öffnen - öffnet in neuem Tab"><picture><source srcset="../medias/isit-ch.avif" type="image/avif"><source srcset="../medias/isit-ch.webp" type="image/webp"><img class="isit-logo" src="../medias/isit-ch.png" srcset="../medias/isit-ch.png 1x" width="714" height="200" alt="ISIT Switzerland" fetchpriority="high" decoding="async" /></picture></a>
+        <a class="logo-link" href="https://isit-be.org" target="_blank" rel="noopener noreferrer" title="ISIT Belgium Website öffnen - öffnet in neuem Tab"><picture><source srcset="../logos-resized/isit-be.avif" type="image/avif"><source srcset="../logos-resized/isit-be.webp" type="image/webp"><img class="isit-logo" src="../logos-resized/isit-be.png" alt="ISIT Belgium" width="212" height="60" fetchpriority="high" decoding="async" /></picture></a>
+        <a class="logo-link" href="https://institutnr.org" target="_blank" rel="noopener noreferrer" title="INR France Website öffnen - öffnet in neuem Tab"><picture><source srcset="../logos-resized/inr-fr.avif" type="image/avif"><source srcset="../logos-resized/inr-fr.webp" type="image/webp"><img class="isit-logo" src="../logos-resized/inr-fr.png" alt="INR France" width="195" height="60" fetchpriority="high" decoding="async" /></picture></a>
+        <a class="logo-link" href="https://isit-ch.org/" target="_blank" rel="noopener noreferrer" title="ISIT Switzerland Website öffnen - öffnet in neuem Tab"><picture><source srcset="../logos-resized/isit-ch.avif" type="image/avif"><source srcset="../logos-resized/isit-ch.webp" type="image/webp"><img class="isit-logo" src="../logos-resized/isit-ch.png" alt="ISIT Switzerland" width="214" height="60" fetchpriority="high" decoding="async" /></picture></a>
       </div>
       <h2>Ziel der nachhaltigen IT</h2>
       <p>
-        Digitale Technologien neu zu denken bedeutet, eine digitale Welt zu schaffen, die für den Planeten tragfähig ist und einer möglichst grossen Zahl von Menschen zugutekommt — in einer gerechten Verteilung des geschaffenen Werts. Dieses Prinzip stützt sich auf die drei Säulen der nachhaltigen IT (3P): People, Planet, Prosperity (Menschen, Planet, Wohlstand).
+        Digitale Technologien neu zu denken bedeutet, eine digitale Welt zu schaffen, die für den Planeten tragfähig ist und einer möglichst grossen Zahl von Menschen zugutekommt - in einer gerechten Verteilung des geschaffenen Werts. Dieses Prinzip stützt sich auf die drei Säulen der nachhaltigen IT (3P): People, Planet, Prosperity (Menschen, Planet, Wohlstand).
       </p>
       <h2>Wer wir sind</h2>
       <p>
@@ -154,7 +196,7 @@
       </div>
       <div class="one-project">
         <h3>Label nachhaltige IT</h3>
-        <p>Das vom französischen INR geschaffene Label nachhaltige IT bestätigt den globalen nachhaltigen IT-Ansatz der Organisation und die Motivation der IT-Teams. Das Label belegt die Professionalität Ihrer nachhaltigen IT-Umsetzung — der Labelprozess ist daher anspruchsvoll.</p>
+        <p>Das vom französischen INR geschaffene Label nachhaltige IT bestätigt den globalen nachhaltigen IT-Ansatz der Organisation und die Motivation der IT-Teams. Das Label belegt die Professionalität Ihrer nachhaltigen IT-Umsetzung - der Labelprozess ist daher anspruchsvoll.</p>
         <a href="https://isit-be.org/the-sustainable-it-label" target="_blank" rel="noopener noreferrer" title="Entdecken - öffnet in neuem Tab">Projekt entdecken</a>
       </div>
       <div class="one-project last-line">
@@ -172,12 +214,29 @@
         <p>Das ISIT-Netzwerk in Europa startet das Verzeichnis der Expertinnen und Experten für nachhaltige IT. Dieses Tool erleichtert die Suche nach qualifizierten Profilen, die den Aufbau und die Entwicklung des nachhaltigen IT-Ansatzes von Organisationen begleiten können.</p>
         <a href="https://experts.isit-europe.org" target="_blank" rel="noopener noreferrer" title="Entdecken - öffnet in neuem Tab">Projekt entdecken</a>
       </div>
+      <div class="one-project">
+        <h3>Open Source auf GitHub</h3>
+        <p>Wir veröffentlichen Open-Source-Skills und -Regeln für KI-Assistenten: green-claude, frei zugänglich für alle, und skill-nr (Regeln für Ökodesign und digitale Verantwortung für KI-Assistenten), das ISIT- und INR-Mitgliedern vorbehalten ist - sowie viele weitere Projekte.</p>
+        <a href="https://github.com/Institut-du-Numerique-Responsable" target="_blank" rel="noopener noreferrer" title="Entdecken - öffnet in neuem Tab">Projekt entdecken</a>
+      </div>
     </div>
+  </div>
+
+  <div class="social-sharing" role="region" aria-label="Diese Seite in sozialen Netzwerken teilen">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://isit-europe.org/de/" target="_blank" rel="noopener noreferrer" aria-label="Auf Facebook teilen">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.5 9H15V6.5h-1.5C11.6 6.5 10 8.1 10 10.1V12H8v3h2v6h3v-6h2.2l.8-3H13v-1.6c0-.6.4-1.4 1.5-1.4z"/></svg>
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://isit-europe.org/de/&text=ISIT%20Europe%20-%20Europ%C3%A4isches%20Netzwerk%20der%20Institute%20f%C3%BCr%20nachhaltige%20IT" target="_blank" rel="noopener noreferrer" aria-label="Auf X (Twitter) teilen">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://isit-europe.org/de/&title=ISIT%20Europe" target="_blank" rel="noopener noreferrer" aria-label="Auf LinkedIn teilen">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.94 8.5H4.56V19h2.38V8.5zM5.75 4.5a1.38 1.38 0 100 2.75 1.38 1.38 0 000-2.75zM19.44 19h-2.38v-5.4c0-1.29-.46-2.17-1.6-2.17-.87 0-1.39.59-1.62 1.15-.08.2-.1.48-.1.76V19h-2.38s.03-9.53 0-10.5h2.38v1.49c.32-.49.88-1.19 2.14-1.19 1.56 0 2.73 1.02 2.73 3.2V19z"/></svg>
+    </a>
   </div>
 
   <footer>
     <div class="footer-content">
-      <p>&copy; 2026 ISIT Europe — <a href="/de/legal-notices.html">Impressum &amp; Datenschutzerklärung</a></p>
+      <p>&copy; 2026 ISIT Europe · <a href="/de/legal-notices.html">Impressum &amp; Datenschutzerklärung</a> · <a href="/de/barrierefreiheitserklaerung.html">Barrierefreiheit</a> · <a href="/pages/monitoring.html" rel="nofollow">Monitoring</a></p>
     </div>
   </footer>
 

@@ -81,6 +81,18 @@ body {
 	-webkit-text-size-adjust:100%;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* Accessibility: Skip to content */
 .skip-link {
     position: absolute;
@@ -100,6 +112,27 @@ body {
 
 img {max-width:100%;height:auto;}
 a {touch-action:manipulation;}
+
+.logos {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	margin: 30px 0;
+	flex-wrap: wrap;
+}
+
+.logo-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+img.isit-logo {
+	height: 60px;
+	width: auto;
+	max-width: 100%;
+}
 
 div#conteneur {
 	width:80%;
@@ -140,6 +173,13 @@ h2 {padding:20px 0 0 0;margin:0;color: var(--title-color);font-weight:bold;font-
 
 div.square-content h2, div.square-content p {color:#fff;}
 
+
+/* Improved color contrast for content in square boxes */
+div.square-content {
+    /* Ensure sufficient contrast between text and background */
+    color: #fff;
+}
+
 #projects {
 	display:flex;
 	justify-content: flex-start;
@@ -160,37 +200,284 @@ div.square-content h2, div.square-content p {color:#fff;}
 .square-content a {color:#fff;font-size:0.9rem;display:block;text-align:right;}
 .square-content a:hover {color:#ccccff;}
 
+/* Mobile responsiveness enhancements */
 @media only screen and (max-width: 782px) {
 	div#conteneur {width:95%;padding:10px;}
+	main#main-content {
+		width:100%;
+		padding:0;
+	}
+	aside#side-content {
+		width:100%;
+		padding:0;
+		margin-top: 20px;
+	}
+	.square-content {
+		padding:12px;
+	}
+	.square-content h3 {
+		font-size: 1.2rem;
+	}
+	
+	/* Adjust navigation menu for mobile */
+	nav.lang-switcher {
+		display:flex;
+		flex-wrap:wrap;
+		gap:4px;
+		justify-content:center;
+		margin:10px 0;
+	}
+	
+	nav.lang-switcher a {
+		font-size: 0.9rem;
+		padding:6px 10px;
+		white-space: nowrap;
+	}
+	
+	/* Mobile project display */
+	#projects {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+	
+	.one-project {
+		background-color: #e8f4f7;
+		padding: 15px;
+		border-left: 4px solid var(--accent-color);
+	}
+	
+	/* Adjust footer for mobile */
+	.footer-content a {
+		font-size: 0.9rem;
+		display: block;
+		margin: 5px 0;
+	}
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media only screen and (max-width: 576px) {
+	.square-content h3 {
+		font-size: 1.1rem;
+	}
+	
+	.square-content p {
+		font-size: 0.9rem;
+	}
+	
+	.square-content a {
+		font-size: 0.85rem;
+	}
+	
+	h1 {
+		font-size: 2rem;
+		letter-spacing:-1px;
+	}
+	
+	/* Further reduce spacing for small screens */
+	div#conteneur {
+		padding: 8px;
+	}
+	
+	.large-content {
+		padding: 20px 10px;
+	}
+	
+	h2 {
+		font-size: 1.5rem;
+	}
+}
+
+/* Landscape phones */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+	.square-content h3 {
+		font-size: 1.1rem;
+	}
+	
+	h1 {
+		font-size: 2.2rem;
+	}
+}
+
+/* Improve accessibility for mobile */
+/* Make touch targets large enough (minimum 44px) */
+@media only screen and (max-width: 782px) {
+	.square-content a,
+	nav.lang-switcher a,
+	.social-sharing a {
+		min-height: 44px;
+		min-width: 44px;
+		line-height: 44px;
+		padding: 0;
+	}
+}
+
+/* Ensure proper touch sizing for all interactive elements */
+a, button, input[type="submit"], input[type="button"] {
+	min-height: 44px;
+	min-width: 44px;
+	line-height: 1.5rem;
+	padding: 10px;
+}
+
+/* Better handling of social buttons on mobile */
+.social-sharing a {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 0.8rem;
 }
 
 h1 {padding:0px 0;width:100%;max-width:800px;color: var(--title-color);font-weight:900;font-size:3rem;text-transform: uppercase;letter-spacing:-2px;text-align:left;}
 
-.logos {
-	display:flex;
-	gap:16px;
-	flex-wrap:wrap;
-	align-items:center;
-	justify-content:space-around;
-	margin:10px 0 20px;
+/* Mobile-specific enhancements for better smartphone experience */
+@media only screen and (max-width: 768px) {
+	/* Reduce font sizes for smaller screens */
+	h1 {font-size: 2.5rem;}
+	h2 {font-size: 1.8rem;}
+	
+	/* Optimize navigation menus */
+	nav.lang-switcher {
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 10px 0;
+		font-size: 0.9rem;
+	}
+	
+	nav.lang-switcher a {
+		padding: 8px 12px;
+		min-width: 36px;
+		min-height: 36px;
+		font-size: 0.9rem;
+		line-height: 1.2rem;
+	}
+	
+	/* Improve touch target sizing */
+	.square-content a,
+	nav.lang-switcher a,
+	.social-sharing a {
+		min-width: 44px;
+		min-height: 44px;
+		line-height: 44px;
+		padding: 0 5px;
+		font-size: 0.9rem;
+	}
+	
+	/* Responsive project layout */
+	#projects > div {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	
+	#projects > div .project-text {
+		width: 100%;
+	}
+	
+	#projects > div .project-link {
+		width: 100%;
+		margin-top: 10px;
+		text-align: center;
+	}
 }
-.logo-link {
-	display:inline-flex;
-	align-items:center;
-	justify-content:center;
-	padding:8px;
-	min-height:44px;
-	line-height:0;
+
+/* Extra-small devices (phones) */
+@media only screen and (max-width: 480px) {
+	h1 {font-size: 2rem; letter-spacing: -1px;}
+	h2 {font-size: 1.5rem;}
+	
+	/* Further reduce spacing for very small screens */
+	div#conteneur {
+		padding: 5px;
+	}
+	
+	.large-content {
+		padding: 15px 5px;
+	}
+	
+	.square-content {
+		margin: 8px 0;
+		padding: 10px;
+		font-size: 0.9rem;
+	}
+	
+	.square-content h3 {
+		font-size: 1.2rem;
+	}
+	
+	/* Adjust logo display for small screens */
+	.logos {
+		flex-direction: column;
+		gap: 10px;
+		margin: 5px 0;
+	}
+
+	.logo-link {
+		padding: 5px;
+	}
+
+	img.isit-logo {
+		height: 48px;
+	}
+
+	/* Social sharing buttons responsive */
+	.social-sharing a {
+		width: 36px;
+		height: 36px;
+		line-height: 36px;
+		font-size: 0.7rem;
+		transition: transform 0.2s ease;
+	}
+	
+	.social-sharing a:hover {
+		transform: scale(1.2);
+	}
 }
-img.isit-logo {
-	height:70px;
-	width:auto;
-	max-width:100%;
-	object-fit:contain;
+
+/* Touch optimization for all screen sizes */
+a, button, input[type="submit"], input[type="button"], .square-content a, .social-sharing a, nav.lang-switcher a {
+	touch-action: manipulation;
 }
-@media only screen and (max-width: 782px) {
-	img.isit-logo {height:56px;}
+
+/* Enhanced mobile navigation */
+@media only screen and (max-width: 768px) {
+	nav.lang-switcher {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 4px;
+		align-items: center;
+		padding: 10px 0;
+		margin: 15px 0;
+		background-color: #ffffff20;
+		border-radius: 8px;
+	}
+	
+	nav.lang-switcher a {
+		transition: all 0.3s ease;
+		white-space: nowrap;
+	}
 }
+
+/* Ensure content stays visible on scroll */
+@media only screen and (max-width: 768px) {
+	body {
+		-webkit-overflow-scrolling: touch;
+	}
+	
+	.square-content {
+		border-radius: 6px;
+	}
+	
+	.one-project {
+		border-radius: 6px;
+	}
+}
+
+/* Ensure all interactive elements are touch-friendly */
+a, button, input[type="submit"], input[type="button"], .square-content a, .social-sharing a, nav.lang-switcher a {
+	touch-action: manipulation;
+}
+
 p {
 	font-size:0.9rem;
 	line-height:1.5rem;
@@ -254,8 +541,9 @@ footer {
 }
 
 .footer-content a {
-    color: #c8e8f4;
+    color: #ffffff;
     text-decoration: underline;
+    font-weight: 600;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -269,7 +557,7 @@ footer {
 }
 
 .footer-content a:hover {
-    color: #fff;
+    color: #cdeaf6;
 }
 
 /* MENTIONS LEGALES */
@@ -311,7 +599,11 @@ section h2 {
 .legal-update {
     padding-top: 30px;
     font-size: 0.8rem;
-    color: #888;
+    color: #666;
+}
+
+@media (prefers-color-scheme: dark) {
+    .legal-update { color: #a0a0a0; }
 }
 
 /* LANGUAGE SWITCHER */
@@ -369,5 +661,5 @@ section h2 {
 	.square-content, .one-project { page-break-inside: avoid; }
 	a, a:visited { color: #000; text-decoration: underline; }
 	a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; }
-	.logos img { max-width: 200px; }
+	.logos img { max-width: 100px; height: auto; }
 }

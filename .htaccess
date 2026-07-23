@@ -44,9 +44,15 @@ RewriteRule ^$ /it/ [R=302,L]
     Header always set X-Content-Type-Options "nosniff"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
     Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()"
-    Header always set Content-Security-Policy "default-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; script-src 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+    
+    # Enhanced Content Security Policy
+    Header always set Content-Security-Policy "default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: https://analytic.institutnr.org:8443; script-src 'self' https://analytic.institutnr.org:8443; connect-src 'self' https://analytic.institutnr.org:8443; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content"
+    
+    # Cross-Origin Headers
     Header always set Cross-Origin-Opener-Policy "same-origin"
     Header always set Cross-Origin-Resource-Policy "same-origin"
+    Header always set Cross-Origin-Embedder-Policy "require-corp"
+    
     Header unset X-Powered-By
     Header unset Server
 </IfModule>
