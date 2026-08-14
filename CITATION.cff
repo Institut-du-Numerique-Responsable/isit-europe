@@ -1,0 +1,29 @@
+# Métadonnées de citation lisibles par les humains, les moteurs et les assistants IA.
+# Format Citation File Format 1.2.0 — https://citation-file-format.github.io
+cff-version: 1.2.0
+message: "Si vous utilisez ce travail, merci de le citer comme ci-dessous."
+type: software
+title: "isit-europe — Présentation européenne de l'Institut du Numérique Responsable"
+abstract: "Page d'accueil de présentation de l'Institut du Numérique Responsable à l'échelle européenne (ISIT) / European landing page"
+authors:
+  - name: "Institut du Numérique Responsable"
+    alias: "INR"
+    website: "https://institutnr.org"
+  - given-names: "Guillaume"
+    family-names: "Gallon"
+    alias: "gridboy"
+    affiliation: "Institut du Numérique Responsable"
+repository-code: "https://github.com/Institut-du-Numerique-Responsable/isit-europe"
+url: "https://isit-europe.org/"
+date-released: 2026-04-06
+keywords:
+  - "digital-sustainability"
+  - "europe"
+  - "green-it"
+  - "inr"
+  - "isit"
+  - "landing-page"
+  - "numerique-responsable"
+  - "responsible-tech"
+  - "static-site"
+  - "sustainable-it"
