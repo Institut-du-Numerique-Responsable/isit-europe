@@ -4,9 +4,67 @@
 
   <url>
     <loc>https://isit-europe.org/about.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isit-europe.org/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://isit-europe.org/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://isit-europe.org/it/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://isit-europe.org/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isit-europe.org/about.html" />
+  </url>
+
+  <url>
+    <loc>https://isit-europe.org/fr/about.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isit-europe.org/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://isit-europe.org/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://isit-europe.org/it/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://isit-europe.org/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isit-europe.org/about.html" />
+  </url>
+
+  <url>
+    <loc>https://isit-europe.org/de/about.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isit-europe.org/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://isit-europe.org/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://isit-europe.org/it/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://isit-europe.org/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isit-europe.org/about.html" />
+  </url>
+
+  <url>
+    <loc>https://isit-europe.org/it/about.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isit-europe.org/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://isit-europe.org/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://isit-europe.org/it/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://isit-europe.org/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isit-europe.org/about.html" />
+  </url>
+
+  <url>
+    <loc>https://isit-europe.org/es/about.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isit-europe.org/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isit-europe.org/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://isit-europe.org/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://isit-europe.org/it/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://isit-europe.org/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isit-europe.org/about.html" />
   </url>
 
   <url>

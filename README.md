@@ -24,29 +24,34 @@ Each translation lives in its own subdirectory with full `hreflang` cross-refere
 
 ### Automatic language redirect
 
-Requests to `/` are redirected (`302`) to the matching language subdirectory based on the browser `Accept-Language` header — no IP geolocation, no cookies. Search-engine crawlers are excluded from the redirect so every language URL is indexed independently. The `Vary: Accept-Language` response header tells shared caches to vary by language. Users can always override the choice via the switcher.
+Requests to `/` are redirected (`302`) to the matching language subdirectory based on the browser `Accept-Language` header — no IP geolocation, no cookies. Search-engine crawlers are excluded from the redirect so every language URL is indexed independently. The `Vary: Accept-Language` response header tells shared caches to vary by language. Users can always override the choice via the switcher — the "EN" link points to `/?lang=en`, a query-string flag `.htaccess` checks before the `Accept-Language` rules, so a non-English browser clicking it isn't bounced straight back to its own language.
 
 ## Project structure
 
 ```
 isit-europe/
 ├── index.html                        # Main page (EN, default)
+├── about.html                        # Project/network presentation (EN)
 ├── legal-notices.html                # Legal notices & privacy policy (EN)
 ├── accessibility-declaration.html    # Accessibility statement (EN, WCAG 2.1 AA)
 ├── fr/                                # French version
 │   ├── index.html
+│   ├── about.html
 │   ├── legal-notices.html
 │   └── declaration-accessibilite.html  # RGAA-structured, French legal recourse
 ├── de/                                # German version
 │   ├── index.html
+│   ├── about.html
 │   ├── legal-notices.html
 │   └── barrierefreiheitserklaerung.html
 ├── it/                                # Italian version
 │   ├── index.html
+│   ├── about.html
 │   ├── legal-notices.html
 │   └── dichiarazione-di-accessibilita.html
 ├── es/                                # Spanish version
 │   ├── index.html
+│   ├── about.html
 │   ├── legal-notices.html
 │   └── declaracion-de-accesibilidad.html
 ├── pages/
@@ -54,6 +59,7 @@ isit-europe/
 │   └── monitoring.js                 # Dashboard logic (external, CSP script-src 'self')
 ├── robots.txt                        # Search engine directives
 ├── sitemap.xml                       # XML sitemap (all 5 languages, reciprocal hreflang alternates)
+├── llms.txt                          # Plain-text summary for AI/LLM crawlers (GPTBot, ClaudeBot, PerplexityBot…)
 ├── .htaccess                         # Apache: HTTPS, security headers, cache, gzip/brotli, language auto-redirect, CSP
 ├── css/
 │   └── stylesheet.css                # Main stylesheet (includes self-hosted font declarations)
@@ -117,6 +123,7 @@ isit-europe/
 - Open Graph + Twitter Card with localised `og:locale`
 - Schema.org JSON-LD (`Organization` for homepages, `WebPage` for legal pages)
 - One `<h1>` per page, meta description 120–160 chars, title ≤ 70 chars
+- [`llms.txt`](./llms.txt) at the site root gives AI/LLM crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended…) a compact, structured summary of the network and its pages — none of them are blocked in `robots.txt`, only `pages/monitoring.html` is
 
 ### GDPR
 - No personal data collected, no form, no cookie, no third-party request
