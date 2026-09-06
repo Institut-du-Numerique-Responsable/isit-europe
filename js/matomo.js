@@ -5,7 +5,7 @@ _paq.push(['enableLinkTracking']);
 (function() {
   var u = "//analytic.institutnr.org:8443/";
   _paq.push(['setTrackerUrl', u + 'matomo.php']);
-  _paq.push(['setSiteId', '10']);
+  _paq.push(['setSiteId', '17']);
   var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
   g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 })();
