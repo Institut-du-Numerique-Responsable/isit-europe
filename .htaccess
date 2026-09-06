@@ -20,6 +20,12 @@ RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 RewriteCond %{HTTP_USER_AGENT} (bot|crawler|spider|slurp|lighthouse|pingdom|uptimerobot|facebookexternalhit|twitterbot|linkedinbot|whatsapp|applebot|gtmetrix|pagespeed) [NC]
 RewriteRule ^$ - [L]
 
+# Explicit English request from the lang switcher bypasses Accept-Language
+# detection (fixes: FR/DE/IT browsers clicking "EN" got bounced right back
+# to their own /xx/ by the rules below, since EN has no dedicated /en/ path).
+RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+RewriteRule ^$ - [L]
+
 # French speakers → /fr/
 RewriteCond %{REQUEST_URI} ^/$
 RewriteCond %{HTTP:Accept-Language} ^fr [NC]

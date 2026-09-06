@@ -1,0 +1,20 @@
+# ISIT Europe
+
+> European network of Institutes for Sustainable IT (Green IT), bringing together non-profit organisations in Belgium, France and Switzerland to reduce the environmental and social footprint of digital technology.
+
+ISIT Europe was born in France in 2014 and now federates three national non-profits, together representing more than 290 member organisations (large companies, SMEs, local authorities, schools, universities, NGOs). The network's action is built on the "3P" principle of sustainable IT: People, Planet, Prosperity.
+
+## Member organisations
+
+- [ISIT Belgium](https://isit-be.org): Belgian Institute for Sustainable IT, think and do tank founded in 2020, 80+ members.
+- [INR France](https://institutnr.org): Institut du Numérique Responsable, created in 2018, 170+ members, supported by the Nouvelle-Aquitaine Region, ADEME, the French Ministry of Environment and the Interministerial Digital Direction.
+- [ISIT Switzerland](https://isit-ch.org): Swiss Institute for Sustainable IT, founded in 2021, present in French-speaking Switzerland, 40 members.
+
+## Pages
+
+- [Home](https://isit-europe.org/): network overview, mission, the three member institutes.
+- [About](https://isit-europe.org/about.html): origin, mission, projects, and the open self-hosted website behind the network.
+- [Legal notices](https://isit-europe.org/legal-notices.html): publisher information and privacy policy.
+- [Accessibility declaration](https://isit-europe.org/accessibility-declaration.html): conformance status and accessibility contact.
+
+Available in English, French, German, Italian and Spanish (language prefixes `/fr/`, `/de/`, `/it/`, `/es/`).
