@@ -23,7 +23,7 @@
 - [GR491](https://gr491.isit-europe.org/): 491 recommendations across 8 families for responsible digital service design. Own [llms.txt](https://gr491.isit-europe.org/llms.txt).
 - [Myimpact](https://myimpact.isit-europe.org/): calculator for an individual's professional digital footprint. Own [llms.txt](https://myimpact.isit-europe.org/llms.txt).
 - [Sustainable IT Charter](https://charter.isit-europe.org/): public commitment framework for organisations starting their Sustainable IT approach. Own [llms.txt](https://charter.isit-europe.org/llms.txt).
-- [Sustainable IT MOOC](https://isit-academy.org/): free video, text and interactive course on Sustainable IT fundamentals. Own [llms.txt](https://isit-academy.org/llms.txt).
+- [Sustainable IT MOOC](https://www.academie-nr.org/): free video, text and interactive course on Sustainable IT fundamentals. Own [llms.txt](https://www.academie-nr.org/llms.txt).
 - [Sustainable IT Certificate](https://institutnr.org/sustainable-it-certificate-of-knowledge): knowledge certification exam following the MOOC.
 - [Sustainable IT Label](https://isit-be.org/the-sustainable-it-label): demanding validation of an organisation's global Sustainable IT approach.
 - [Digital Experts Directory](https://experts.isit-europe.org/): directory of qualified Sustainable IT experts across Europe.
