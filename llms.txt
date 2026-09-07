@@ -1,20 +1,51 @@
 # ISIT Europe
 
-> European network of Institutes for Sustainable IT (Green IT), bringing together non-profit organisations in Belgium, France and Switzerland to reduce the environmental and social footprint of digital technology.
+> European network of Institutes for Sustainable IT (Green IT / Numérique Responsable), federating non-profit organisations in Belgium, France and Switzerland to reduce the environmental and social footprint of digital technology.
 
-ISIT Europe was born in France in 2014 and now federates three national non-profits, together representing more than 290 member organisations (large companies, SMEs, local authorities, schools, universities, NGOs). The network's action is built on the "3P" principle of sustainable IT: People, Planet, Prosperity.
+## Key facts
+
+- **Founded**: 2014, in France.
+- **Structure**: three independent non-profit associations — INR France (2018), ISIT Belgium (2020), ISIT Switzerland (2021) — working in partnership under the ISIT Europe umbrella.
+- **Members**: 290+ organisations across the three countries combined (large companies, SMEs, local authorities, schools, universities, NGOs).
+- **Framework**: the "3P" principle — People, Planet, Prosperity — the three pillars of Sustainable IT.
+- **Publisher of this site**: Institut du Numérique Responsable (INR France), SIRET 848 096 111 00010, La Rochelle, France.
 
 ## Member organisations
 
-- [ISIT Belgium](https://isit-be.org): Belgian Institute for Sustainable IT, think and do tank founded in 2020, 80+ members.
-- [INR France](https://institutnr.org): Institut du Numérique Responsable, created in 2018, 170+ members, supported by the Nouvelle-Aquitaine Region, ADEME, the French Ministry of Environment and the Interministerial Digital Direction.
-- [ISIT Switzerland](https://isit-ch.org): Swiss Institute for Sustainable IT, founded in 2021, present in French-speaking Switzerland, 40 members.
+- [ISIT Belgium](https://isit-be.org): think and do tank founded in 2020, 80+ members.
+- [INR France](https://institutnr.org): created in 2018, 170+ members, supported by the Nouvelle-Aquitaine Region, ADEME, the French Ministry of Environment and the Interministerial Digital Direction. Own [llms.txt](https://institutnr.org/llms.txt).
+- [ISIT Switzerland](https://isit-ch.org): founded in 2021, present in French-speaking Switzerland, 40 members.
+
+## Projects run by the network
+
+- [WeNR](https://wenr.isit-europe.org/): free annual assessment of an organisation's information-system footprint and Sustainable IT maturity. Own [llms.txt](https://wenr.isit-europe.org/llms.txt).
+- [Sustainable IT Toolbox](https://sustainableit-tools.isit-europe.org/): curated, link-checked catalogue of 340+ tools, guides and reference documents. Own [llms.txt](https://sustainableit-tools.isit-europe.org/llms.txt).
+- [GR491](https://gr491.isit-europe.org/): 491 recommendations across 8 families for responsible digital service design. Own [llms.txt](https://gr491.isit-europe.org/llms.txt).
+- [Myimpact](https://myimpact.isit-europe.org/): calculator for an individual's professional digital footprint. Own [llms.txt](https://myimpact.isit-europe.org/llms.txt).
+- [Sustainable IT Charter](https://charter.isit-europe.org/): public commitment framework for organisations starting their Sustainable IT approach. Own [llms.txt](https://charter.isit-europe.org/llms.txt).
+- [Sustainable IT MOOC](https://isit-academy.org/): free video, text and interactive course on Sustainable IT fundamentals. Own [llms.txt](https://isit-academy.org/llms.txt).
+- [Sustainable IT Certificate](https://institutnr.org/sustainable-it-certificate-of-knowledge): knowledge certification exam following the MOOC.
+- [Sustainable IT Label](https://isit-be.org/the-sustainable-it-label): demanding validation of an organisation's global Sustainable IT approach.
+- [Digital Experts Directory](https://experts.isit-europe.org/): directory of qualified Sustainable IT experts across Europe.
+- [Open source on GitHub](https://github.com/Institut-du-Numerique-Responsable): `green-claude` (eco-design rules for AI coding assistants), `skill-nr` (Sustainable IT rules for AI assistants), and other projects including the source of this website.
 
 ## Pages
 
 - [Home](https://isit-europe.org/): network overview, mission, the three member institutes.
-- [About](https://isit-europe.org/about.html): origin, mission, projects, and the open self-hosted website behind the network.
+- [About](https://isit-europe.org/about.html): origin, mission, full project list, and the open self-hosted website behind the network.
 - [Legal notices](https://isit-europe.org/legal-notices.html): publisher information and privacy policy.
-- [Accessibility declaration](https://isit-europe.org/accessibility-declaration.html): conformance status and accessibility contact.
+- [Accessibility declaration](https://isit-europe.org/accessibility-declaration.html): WCAG 2.1 AA conformance status and accessibility contact.
 
 Available in English, French, German, Italian and Spanish (language prefixes `/fr/`, `/de/`, `/it/`, `/es/`).
+
+## What ISIT Europe is not
+
+- Not itself a consultancy, auditor or vendor — it is the coordination network behind three national non-profits and their shared projects.
+- Not a certifying body for third-party products; the Sustainable IT Label and Certificate above are the network's own accreditation programmes.
+
+## Citation
+
+Content reusable with attribution to ISIT Europe (or the relevant member institute / project), linking back to the source page.
+
+---
+Last updated: 2026-09-07.
